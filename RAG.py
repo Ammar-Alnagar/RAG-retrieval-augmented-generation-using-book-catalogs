@@ -17,6 +17,7 @@ if overwrite:
 
     # get local copy of tables
 
+
     files = [ 'xllm5_arr_url.txt', 
               'xllm5_compressed_ngrams_table.txt',
               'xllm5_word_list.txt',
@@ -208,7 +209,7 @@ def process_query(query, ccnt1, ccnt2, maxprint, output_file = ""):
 
 # hyperparameters
 ccnt1     = 0  
-ccnt2     = 0   # 2  
+ccnt2     = 0   #  2  
 maxprint = 10  # up to maxprint rows shownn per word/section 
 
 spell = Speller(lang='en')
@@ -229,7 +230,7 @@ while query != "":
 
         tokens = query.split(' ')
         for token in tokens:
-            # note: spell('feller') = 'seller', should not be autocorrected
+             # note: spell('feller') = 'seller', should not be autocorrected
             token = token.lower()
             if token not in dictionary:
                 token = spell(token) 
